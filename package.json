@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-bee",
+  "name": "junek3.github.io",
   "private": true,
-  "description": "Gatsby blog starter template",
+  "description": "Junek3's Dev Blog",
   "version": "0.1.0",
   "author": "Junek3",
   "bugs": {
-    "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
+    "url": "https://github.com/Junek3/junek3.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.2.8",
@@ -67,7 +67,7 @@
     "recursive-readdir": "^2.2.2",
     "signale": "^1.3.0"
   },
-  "homepage": "https://github.com/JaeYeopHan/gatsby-starter-bee#readme",
+  "homepage": "https://github.com/Junek3/junek3.github.io",
   "keywords": [
     "gatsby"
   ],
@@ -75,7 +75,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
+    "url": "git+https://github.com/Junek3/junek3.github.io.git"
   },
   "scripts": {
     "deploy": "gatsby build && gh-pages -d public -b master -r 'git@github.com:Junek3/junek3.github.io.git'",
