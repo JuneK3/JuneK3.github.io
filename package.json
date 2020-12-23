@@ -78,7 +78,7 @@
     "url": "git+https://github.com/Junek3/junek3.github.io.git"
   },
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b master -r 'git@github.com:Junek3/junek3.github.io.git'",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "post": "gatsby-post-gen",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
