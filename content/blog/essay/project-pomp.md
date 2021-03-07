@@ -1,3 +1,11 @@
+---
+title: Project POMP
+date: 2021-03-07 17:03:81
+category: essay
+thumbnail: { thumbnailSrc }
+draft: false
+---
+
 # Project POMP 정리
 
 ## 프로젝트를 시작하게 된 이유
