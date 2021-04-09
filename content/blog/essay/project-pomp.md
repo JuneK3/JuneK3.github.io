@@ -1,13 +1,10 @@
 ---
-title: Project POMP
+title: Project POMP 정리글
 date: 2021-03-07 17:03:81
 category: essay
 thumbnail: { thumbnailSrc }
 draft: false
 ---
-
-# Project POMP 정리
-
 ## 프로젝트를 시작하게 된 이유
 
 ICPC Sinchon 운영진 활동중에 캠프 참가자 분들께 문자를 발송해야 하는 일이 많았는데
