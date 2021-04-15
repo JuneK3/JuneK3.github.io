@@ -55,6 +55,15 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `anchor-header`,
+              maintainCase: false,
+              removeAccents: true,
+              elements: [`h1`, `h2`, `h3`, `h4`],
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: '%',
@@ -62,7 +71,6 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-autolink-headers`,
           `gatsby-remark-emoji`,
         ],
       },

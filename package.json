@@ -8,6 +8,7 @@
     "url": "https://github.com/Junek3/junek3.github.io/issues"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "gatsby": "^2.2.8",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-feed": "^2.1.0",
@@ -36,7 +37,7 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.19",
     "node-sass": "^4.11.0",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "query-string": "^6.13.1",
     "react": "^16.8.1",
     "react-disqus-comments": "^1.4.0",
