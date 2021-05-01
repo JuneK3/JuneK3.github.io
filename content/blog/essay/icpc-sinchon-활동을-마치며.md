@@ -17,7 +17,7 @@ ICPC Sinchon은 방학 기간인 약 2달동안 알고리즘 캠프를 진행하
 
 이전 캠프들이 항상 그랬던 것은 아니지만 1년에 2번 캠프를 개최하고 있고, ACM-ICPC 전후로 프로그래밍 대회가 많지 않은 만큼 SUAPC도 1년에 2번 개최하려고 노력하고 있다.
 
-[FaceBook](https://www.facebook.com/icpc.sinchon)과 [ICPC Sinchon 페이지](https://icpc-sinchon.github.io/)도 운영하고 있고, 더 자세한 정보는 해당 링크에서 확인할 수 있다.
+[FaceBook](https://www.facebook.com/icpc.sinchon)과 [ICPC Sinchon 페이지](https://old.suapc.kr/)도 운영하고 있고, 더 자세한 정보는 해당 링크에서 확인할 수 있다.
 
 최근에 ICPC Sinchon 페이지 리뉴얼이 진행중인 것 같다. [새로운 페이지](https://icpc-sinchon.github.io/) 링크를 첨부한다.
 

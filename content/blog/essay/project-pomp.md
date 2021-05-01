@@ -7,18 +7,15 @@ draft: false
 ---
 ## 프로젝트를 시작하게 된 이유
 
-ICPC Sinchon 운영진 활동중에 캠프 참가자 분들께 문자를 발송해야 하는 일이 많았는데
+ICPC Sinchon 운영진 활동중에 캠프 참가자 분들께 문자를 발송해야 하는 일이 많았는데 일일이 손으로 보내는 불편함을 해소하고자 특정 문자를 일괄적으로 보낼 수 있는 자체 서비스를 제작하게 되었다.
 
-일일이 손으로 보내는 불편함을 해소하고자 다수에게 특정 문자를 일괄적으로 보낼 수 있는 자체 서비스를 제작하게 되었다.
-
-문자 서비스 제작을 마치고 팀원들과 다른 프로젝트를 진행하게 되었는데 내가 제출한 구글 폼을 확인 할 수 있으면 좋겠다는 팀원의 아이디어를 시작으로 POMP 프로젝트를 시작하게 되었다.
+문자 서비스 제작을 마치고 팀원들과 다른 프로젝트를 진행하게 되었는데 내가 제출한 구글 폼을 확인 할 수 있으면 좋겠다는 팀원의 아이디어를 바탕으로 POMP 프로젝트를 시작하게 되었다.
 
 ICPC Sinchon 운영진 활동중에 개발에 관심이 있는 분들을 만나서 같이 프로젝트를 하게 될 줄은 상상도 하지 못했는데 정말 좋은 팀원들을 만나서 즐겁게 개발 할 수 있었던 것 같다.
 
 지금까지는 튜토리얼 강의나 클론 코딩 강의를 보고 혼자서 개발 공부를 해왔고 POMP처럼 여러명이 협업해서 프로젝트를 해본 적이 없었다. 
 
 처음 경험해 본 협업 프로젝트인만큼 프로젝트를 진행하면서 겪었던 경험들을 정리해볼 생각이다.
-
 
 ## POMP?
 
@@ -33,7 +30,6 @@ POMP는 자신이 작성하고 제출한 구글 폼을 폼이 닫힌 후에도 �
 로그인 기능으로 유저에 따라 폼을 저장하게 해야 한다고 생각했고, POMP 구글 익스텐션에서 로그인 후에 폼 저장 기능을 켜고 폼을 제출하면 POMP 홈페이지에서 DB에 저장된 데이터를 렌더링해서 확인 할 수 있도록 했다.
 
 ![pomp_project](https://user-images.githubusercontent.com/35721370/110233356-c9904880-7f66-11eb-961b-cb0cdd27bc05.png)
-
 
 ## 역할 분담
 
@@ -56,7 +52,6 @@ POMP는 자신이 작성하고 제출한 구글 폼을 폼이 닫힌 후에도 �
 크롤링 서버에서는 cheerio 라이브러리를 이용해서 html 문서에서 데이터를 추출했다.
 
 크롤링 부분은 처음부터 참여한게 아니라 중간부터 참여했고 추출한 데이터를 DB에 어떤 형식으로 저장할것인가를 함께 고민했다.
-
 
 ## 폼 데이터를 어떻게 저장했는가
 
@@ -153,8 +148,7 @@ pomp.leed.at에 접속하게 되면 바로 메인 페이지로 redirect되게 �
 
 위에서 제출했던 폼에는 단답형과 장문형, 객관식 선택으로만 구성되어 있었는데, 이외에도 구글 폼에서 지원하는 다양한 포맷들도 데이터 추출후 DB에 저장할 수 있게 했다.
 
-
-## 배포는 어떻게 했는가
+## 🚀 배포는 어떻게 했는가
 
 프로젝트가 어느정도 완성 되고 나서 배포에 대한 부분을 고민하게 되었는데
 
@@ -166,16 +160,13 @@ pomp.leed.at에 접속하게 되면 바로 메인 페이지로 redirect되게 �
 
 로그인 세션과 폼 데이터를 같은 DB서버에 저장하는 방식인데,
 
-로그인과 로그아웃을 할 때마다 DB서버에서 세션을 저장하고 지우기 때문에 DB서버에 무리를
+로그인과 로그아웃을 할 때마다 DB서버에서 세션을 저장하고 지우기 때문에 DB서버에 무리를 주는 방식이라는 점을 뒤늦게 깨달았다.
 
-주는 방식이라는 점을 뒤늦게 깨달았다.
-
-팀원들과 논의해봐야 하겠지만 개인적으로 로그인 세션을 폼 데이터를 저장하는 DB서버와 분리하여 메모리 DB에 따로 저장하는 방식을 고민중이다.
-
+팀원들과 논의해봐야 하겠지만 개인적으로 로그인 세션을 폼 데이터를 저장하는 DB서버와 분리하여 Redis같은 메모리 DB에 따로 저장하는 방식을 고민중이다.
 
 ## 나는 어떤 역할을 맡았는가
 
-일단 나는 백엔드 부분을 메인 역할로 맡았고 프론트 부분 특히 React 부분을 많이 도왔던 것 같다.
+일단 나는 백엔드 부분을 메인 역할로 맡았고 프론트 부분, 특히 React 부분을 많이 도왔던 것 같다.
 
 백엔드 부분도 나 혼자 한게 아니라 팀원들과 함께 작업했다.
 
@@ -201,8 +192,7 @@ passport 도입 부분은 제로초님의 노드교과서를 많이 참고했던
 
 결국 익스텐션 부분은 익스텐션을 담당했던 팀원이 대부분 해결해줘서 도중에 프로젝트가 막히지 않고 계속 진행될 수 있었다.
 
-
-## 직면했던 어려움들과 해결한 방법들
+## 🛠️ 직면했던 어려움들과 해결한 방법들
 
 제작하면서 정말 많은 어려움이 있었지만 내가 직면했던 문제들을 정리해보고자 한다.
 
@@ -250,33 +240,207 @@ return req.login(user, loginError => {
 
 ### 익스텐션 개발
 
-익스텐션 개발 과정 이야기하기
+백엔드 부분과 프론트 부분을 어느 정도 구현하고 나서 크롬 익스텐션 개발을 시작했는데, 참고할만한 자료를 찾는 것도 힘들었고 무엇보다 지금까지 해왔던 개발과는 다르게 보안 문제 방지를 위한 엄격한 규칙을 따라야 했다.
 
-추후 보충 설명
+익스텐션 구현은 내가 아닌 팀원이 대부분 구현했기 때문에 자세하게 설명하기는 힘들겠지만, 내가 이해한 만큼 설명을 해보려고 한다.
 
-### 익스텐션과 서버, 익스텐션과 클라이언트의 통신
+학교 클래스넷과 관련된 익스텐션을 만들어 볼 예정이라 직접 익스텐션을 개발하게 되었을 때 설명을 더 보충할 생각이다.
 
-웹페이지와 익스텐션에서 로그인 상태 동기화 하기
+일단 크롬 익스텐션은 하나의 개발 영역이 아닌 백그라운드와 다른 영역으로 나뉘게 되는데, 익스텐션에서 일어나는 모든 동작들은 무조건 백그라운드를 거쳐야 한다.
 
-uuid를 도입하여 해결함
+예를 들면 익스텐션에서 팝업창을 띄워야 할 때 익스텐션 상에서 바로 팝업창을 띄우는 동작을 불가능하다는 것이다.
 
-추후 보충설명
+일단 백그라운드에 메시지를 보내는 방식을 취해야 하고 메시지를 받은 백그라운드는 팝업창을 띄우는 부분에 메시지를 보내 동작할 수 있게 한다.
+
+POMP에서는 익스텐션과 서버, 프론트끼리 통신하는 방식으로 이루어졌는데 백그라운드와 관련된 내용을 알지 못했기에 이 부분을 이해하는데 시간이 걸렸던 것 같다.
 
 ### 폼이 여러 페이지인 경우
 
-익스텐셩의 백그라운드에서 따로 처리해서 크롤링서버로 전달
+익스텐션 개발을 시작하고 나서 크롤링 서버로 폼 데이터를 보내는 부분을 개발하게 되었다.
 
-추후 보충설명
+그런데 폼데이터를 받아오는 테스트를 하다가 간과한 사실이 있다는 걸 깨닫게 되는데 바로 폼이 여러 페이지인 경우를 전혀 고려하지 않았다는 것이다.
+
+지금 생각해보면 페이지가 하나인 폼으로만 테스트를 해와서 이 부분을 간과하지 않았나 싶다.
+
+폼의 페이지 처리를 위해 구글 폼의 다음 페이지 버튼이 클릭 될 경우 크롬 익스텐션의 Local Storage에 페이지 별로 저장하고 제출 버튼을 누르는 경우 크롤링 서버에 페이지 별로 구별해서 보내는 방식으로 구현해냈다.
+
+그리고 폼을 어려개 띄워놓고 제출하는 상황에서 폼 데이터가 섞여버리는 오류를 방지하기 위해 폼 URL의 ID값을 Local Storage의 key값에 포함하여 저장했다.
+
+```js
+document
+  .querySelectorAll('.appsMaterialWizButtonPaperbuttonFilled')
+  .forEach((ele, idx) => {
+    // 클릭하면
+    ele.onclick = () => {
+      chrome.storage.local.get(['switch', 'uuid'], data => {
+        // 스위치가 꺼져있다면 return;
+        if (!data.switch) return;
+
+        // 마지막 페이지 HTML 저장
+        chrome.storage.local.set({
+          ['docs-' +
+          document.location.href.split('/')[
+            document.location.href.split('/').length - 2
+          ] +
+          '-' +
+          document.getElementsByName('pageHistory')[0]
+            .value]: document.querySelector('body').outerHTML,
+        });
+
+        // background에 post요청
+        chrome.runtime.sendMessage({ msg: 'postHTML', link: location.href });
+      });
+    };
+  });
+```
+
+위의 코드처럼 Local Storage에 데이터를 저장하고 백그라운드에 메시지를 보내게 되는데, 백그라운드에서 제출한 폼에 해당되는 데이터만 따로 가공하여 유저 UUID와 함께 크롤링 서버로 전송하도록 했다.
+
+```js
+// 백그라운드
+function postHTML(href) {
+  let formKey = href.split('/')[href.split('/').length - 2];
+  let toSendKey;
+  // 현재 FORM에 해당하는 HTML의 key만 가져옴
+  chrome.storage.local.get(null, function(items) {
+    toSendKey = new Array(Object.keys(items).length);
+    Object.keys(items).filter((val, idx) => {
+      if (val.indexOf(formKey) !== -1) {
+        toSendKey[idx] = 1;
+      }
+    });
+  });
+
+  // 현재 FORM에 해당하는 HTML의 value와 uuid 가져옴
+  let toSendVal = {},
+    uuid;
+  chrome.storage.local.get(null, async function(items) {
+    uuid = items.uuid;
+    Object.values(items).map((val, idx) => {
+      if (toSendKey[idx] === 1) {
+        toSendVal[idx] = val;
+      }
+    });
+  });
+
+  // 서버로 전송
+  setTimeout(() => {
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'URL');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    try {
+      xhr.send(
+        JSON.stringify({
+          uuid: uuid,
+          formUrl: href,
+          question: toSendVal,
+        })
+      );
+    } catch (err) {
+      alert(err);
+    }
+  }, 2000);
+}
+```
+
+### 로그인 동기화
+
+폼 데이터를 크롤링 서버로 전송하여 DB에 저장하는 것 까지는 구현했지만, 크롬 익스텐션과 POMP페이지간의 로그인 여부와 동기화 되지 않아서 두 클라이언트가 따로 노는 상황이 발생했다.
+
+이 문제를 해결하기 위해 익스텐션이나 POMP 페이지의 로그인 상태를 동기화 해서 둘 중 한군데만 로그인해도 둘 다 로그인 되도록 하고 싶었고, 둘 중 하나에서 로그아웃시 모두 로그아웃 되도록 구현하고 싶었다.
+
+이 부분은 나를 포함한 팀원들 모두 처음 개발해보는 것이어서 어떻게 구현해낼지 고민을 많이 했던 것 같다.
+
+일단 유저를 중복되지 않는 값으로 구별해야 한다는 생각을 했고, 여기서 UUID를 도입하여 유저가 회원가입을 할때 고유한 UUID값을 생성하여 유저 정보와 함께 DB에 저장할 수 있도록 했다.
+
+또한 로그인 하여 req.user가 존재하는 경우에 UUID 값을 전송하는 라우터를 작성하여 프론트와 익스텐션에서 어떤 유저가 로그인 한 상태인지 알 수 있도록 했다.
+
+```js
+// 로그인 상태와 유저 이름, 유저 uuid값을 전송하는 라우터
+router.get('/user', (req, res) => {
+  console.log(req.user);
+  if (req.user) {
+    return res.json({
+      username: req.user.nick,
+      isAuth: true,
+      user: req.user.userUUID,
+    });
+  }
+  return res.json({ isAuth: false });
+});
+```
+
+익스텐션의 경우 POMP 페이지에서 로그인을 하게 되면 바로 로그인 상태가 반영되도록 하고 싶었는데 마땅한 방법을 찾지 못해서 고민하고 있었다.
+
+이 부분은 익스텐션을 대부분 구현한 팀원이 해결했는데, 유저가 크롬 익스텐션을 클릭할시 popup.js가 실행되도록 해서 익스텐션을 클릭했을 때 서버에 로그인 여부를 받아와 익스텐션의 local Storage에 유저 UUID값을 저장하도록 했다.
+
+서버로부터 UUID값을 받아옴으로써 로그인 여부를 익스텐션에 저장하도록 했고, UUID값의 존재여부에 따라 익스텐션의 상태를 변경하도록 했다.
+
+```js
+//서버에서 uuid값을 받아오는 익스텐션의 코드
+chrome.storage.local.get(['uuid', 'switch'], data => {
+  if (data.uuid && !data.switch) return;
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://pompserver.leed.at/api/auth/chkiflogined');
+  xhr.onload = function(res) {
+    const { uuid } = JSON.parse(res.currentTarget.response);
+    if (uuid) {
+      //지금 서버상으로는 로그인 상태
+      chrome.storage.local.set({ uuid: uuid, switch: true }, result => {});
+      document.querySelector('.switch--status').textContent = 'ON';
+      document.querySelector('.login').classList.remove('show');
+      document.querySelector('.login').classList.add('hide');
+      document.querySelector('.logout').classList.add('show');
+      document.querySelector('.logout').classList.remove('hide');
+      document.querySelector('.switch--stick').classList.add('on--stick');
+      document.querySelector('.switch--ball').classList.add('on--ball');
+      document.querySelector('.switch--stick').classList.remove('off--stick');
+      document.querySelector('.switch--ball').classList.remove('off--ball');
+      document.querySelector('.switch--container').classList.add('show');
+      document.querySelector('.switch--container').classList.remove('hide');
+    }
+  };
+  xhr.send('');
+});
+```
+
+서버에서는 로그인이 된 상태, 즉 req.user가 존재하는 경우에만 uuid 값을 전달하도록 코드를 작성하였다. 로그인 여부를 확인하는 코드는 자주 사용되는 만큼 따로 middleware로 빼내서 작성했다.
+
+```js
+// 로그인 된 상태에만 uuid 값을 전달하도록 했다.
+exports.isNotLoggedIn = (req, res, next) => {
+  if (!req.isAuthenticated()) {
+    next();
+  } else {
+    res.json({
+      message: '로그인 상태입니다',
+      uuid: req.user.userUUID,
+    });
+  }
+};
+```
+
+```js
+// isNotLoggedIn 미들웨어를 통과하는 경우에는
+// 로그인이 안 된 상태를 나타내므로 message를 반환하도록 했다.
+router.get('/chkiflogined', isNotLoggedIn, (req, res) => {
+  return res.json({
+    message: 'not logged in',
+  });
+});
+```
+
+일단 로그인 상태를 동기화 하는데에는 성공했지만 UUID값을 Local Storage에 저장하는 방식은 다른 사람에 의해 UUID값이 탈취될 수 있는 방식이어서 보안을 생각했을 때 좋은 방식이 아니라는 생각이 들었다.
+
+아직까지는 내 실력이 부족해서 위의 방식으로 구현하는데 그쳤지만, 나중에 더 좋은 방식을 접하게 된다면 코드를 수정할 생각이다.
 
 ### validation error: 동일한 이메일 존재 오류 해결
 
-각종 테스트를 해보면서 미처 생각하지 못했던 부분에서 오류가 발생하고 있었는데
+각종 테스트를 해보면서 미처 생각하지 못했던 부분에서 오류를 찾아낼 수 있었다.
 
-local로 만든 계정과 동일한 이메일로 kakao나 google로 로그인하는 경우 혹은 그 반대의 경우를 막아야 한다는 점을 놓치고 있었고 이 부분 때문에 passport에서 validation error가 발생하고 있었다.
+local로 만든 계정과 동일한 이메일로 kakao나 google로 로그인하는 경우혹은 그 반대의 경우를 막아야 한다는 점을 놓치고 있었고 이 부분 때문에 passport에서 validation error가 발생하고 있었다.
 
-보안문제를 고려했을 때 회원가입한 정보대로 로그인을 강제해야 한다는 생각을 하게 되었고,
-
-실제로 tistory에서 동일한 오류를 잡아주는 것을 보았기 때문에 POMP에서도 비슷하게 해결하고자 했다.
+보안문제를 고려했을 때 회원가입한 정보대로 로그인을 강제해야 한다는 생각을 하게 되었고, 실제로 tistory에서 동일한 오류를 잡아주는 것을 보았기 때문에 POMP에서도 비슷하게 해결하고자 했다.
 
 ![tistory](https://user-images.githubusercontent.com/35721370/110233358-ca28df00-7f66-11eb-8a87-8b7dd45938d3.png)
 
@@ -299,7 +463,7 @@ if (sameEmailUser) {
 
 passport.authenticate 함수에 done 콜백함수를 전달하고 나서 이메일 중복 문제가 발생했을 경우 authenticate 함수내에서 프론트에 오류 상황에 대한 응답을 하고 싶었다.
 
-```jsx
+```js
 router.get(
   '/kakao/callback',
   passport.authenticate('kakao', {
@@ -313,9 +477,9 @@ router.get(
 )
 ```
 
-여기서 1차적으로 막히게 되었는데 authenticate 함수내에서 express의 res객체에 접근하지 못했기 때문이다.
+여기서 1차적으로 막히게 되었는데 authenticate 함수내에서 express의 res 객체에 접근하지 못했기 때문이다.
 
-가능한 방법을 찾다가 가까스로 제로초님의 노드교과서에서 배웠던 미들웨어 확장패턴이 기억을 해내서 미들웨어 안에서 passport의 authenticate 함수를 호출할 수 있도록 미들웨어를 확장하여 문제를 해결할 수 있었다.
+가능한 방법을 찾다가 가까스로 제로초님의 노드교과서에서 배웠던 미들웨어 확장패턴을 기억해냈고, 미들웨어 안에서 passport의 authenticate 함수를 호출할 수 있도록 미들웨어를 확장하여 문제를 해결할 수 있었다.
 
 하지만 2차적으로 문제가 발생했는데 미들웨어 확장 이후에 로그인이 되지 않는 문제였다.
 
@@ -357,19 +521,19 @@ router.get('/kakao/callback', function(req, res, next) {
 })
 ```
 
-여기서 passport에 대한 이해도가 많이 부족하다는 점을 깨달았다. 또한 무턱대고 passport를 도입한 것 때문에 다른 팀원들도 힘들게 했던 것 같다는 생각이 들었다.
+여기서 passport에 대한 이해도가 많이 부족하다는 점을 깨달았다.
+
+또한 무턱대고 passport를 도입한 것 때문에 다른 팀원들도 힘들게 했던 것 같다는 생각이 들었다.
 
 프론트 부분에도 tistory와 비슷하게 동일한 계정이 이미 존재한다는 사실을 알려주는 컴포넌트를 보여주게 해서 validation error 처리를 마무리 할 수 있었다.
 
 ![validation-error](https://user-images.githubusercontent.com/35721370/110233359-ca28df00-7f66-11eb-9f63-be7fcc1ac095.png)
 
-
-이외에도 더 있지만 제때 정리하지 못해서 잊혀진 것들이 많은 것 같아서 아쉽다.
+이외에도 더 있지만 제때 정리하지 못해서 잊혀진 것들이 많은 것 같아서 아쉽다. 
 
 해결여부와 관계없이 직면했던 문제들을 정리하는 습관을 들여야 겠다는 생각이 들었다.
 
-
-## POMP에서 느꼈던 점
+## 🤔 POMP에서 느꼈던 점
 
 ### 배포에 대한 공부 필요
 
@@ -413,9 +577,9 @@ POMP 프로젝트를 진행하면서 원래 나누었던 역할대로 작업하�
 
  JWT를 이용한 인증을 도입하는 것처럼 POMP에 사용했던 기술들 중에서 더 나은 방식으로 바꾸는 것도 고려중이어서 POMP 프로젝트는 아마 계속 진행 될 것 같다.
 
-팀원들도 POMP 이후에 서로 다른 프로젝트들을 작업하고 있어서 나를 포함한 팀원들이 성장하는 만큼 POMP이 코드들도 계속 발전하게 될 것 같다.
+팀원들도 POMP 이후에 서로 다른 프로젝트들을 작업하고 있어서 나를 포함한 팀원들이 성장하는 만큼 POMP의 코드들도 계속 발전하게 될 것 같다.
 
-## 마치며..
+## 🙏 마치며..
 
 개인적으로 내가 부족했던 점이 많았다고 생각해서 함께 해준 팀원들에게 감사함을 느끼고 있다. POMP팀 모두 지금보다 성장해서 다음에도 같이 모여서 작업할 수 있으면 좋겠다.
 
@@ -423,6 +587,6 @@ POMP 프로젝트를 진행하면서 원래 나누었던 역할대로 작업하�
 
 [https://cocosy.tistory.com/](https://cocosy.tistory.com/)
 
-[https://blog.soga.ng/storyline](https://blog.soga.ng/storyline)
+[https://blog.soga.ng/storyline](https://blog.soga.ng/storyline)/
 
-(Last updated: 2021.03.07)
+(Last updated: 2021.04.29)
