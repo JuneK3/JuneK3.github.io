@@ -5,7 +5,7 @@ category: essay
 thumbnail: { thumbnailSrc }
 draft: false
 ---
-## 🍏 ICPC Sinchon?
+## ICPC Sinchon?
 
 ICPC Sinchon은 신촌 지역 5개 대학교 소속 알고리즘 동아리 Sogang ICPC Team(서강대), ALGOS(숙명여대), 모르고리즘(연세대), EDOC(이화여대), HI-ARC(홍익대)가 ACM-ICPC 준비를 목적으로 모인 연합 동아리이다.
 
@@ -21,7 +21,7 @@ ICPC Sinchon은 방학 기간인 약 2달동안 알고리즘 캠프를 진행하
 
 최근에 ICPC Sinchon 페이지 리뉴얼이 진행중인 것 같다. [새로운 페이지](https://icpc-sinchon.github.io/) 링크를 첨부한다.
 
-## ❓ 운영진으로 왜 지원하게 되었나
+## 운영진으로 왜 지원하게 되었나
 
 입대하기 전까지만 해도 교내의 알고리즘 학회에 가입해서 정기 스터디에 참여하고 있었고, 휴학생 신분으로 학회 슬랙에 잔류해 있었기 때문에 군생활 중에 ICPC Sinchon이 생겼다는 사실을 알 수 있었다.
 
